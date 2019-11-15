@@ -1,0 +1,24 @@
+Making models for table : usuario
+
+   Illuminate\Database\QueryException  : SQLSTATE[42000]: Syntax error or access violation: 1102 Incorrect database name '' (SQL: SHOW FULL TABLES FROM `` WHERE Table_type="BASE TABLE")
+
+  at C:\Users\IvanC\Development\Xampp7L\xampp\htdocs\Prueba\vendor\laravel\framework\src\Illuminate\Database\Connection.php:665
+    661|         // If an exception occurs when attempting to run a query, we'll format the error
+    662|         // message to include the bindings with SQL, which will make this exception a
+    663|         // lot more helpful to the developer instead of just the database's errors.
+    664|         catch (Exception $e) {
+  > 665|             throw new QueryException(
+    666|                 $query, $this->prepareBindings($bindings), $e
+    667|             );
+    668|         }
+    669|
+
+  Exception trace:
+
+  1   Doctrine\DBAL\Driver\PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1102 Incorrect database name ''")
+      C:\Users\IvanC\Development\Xampp7L\xampp\htdocs\Prueba\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\PDOConnection.php:63
+
+  2   PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1102 Incorrect database name ''")
+      C:\Users\IvanC\Development\Xampp7L\xampp\htdocs\Prueba\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\PDOConnection.php:61
+
+  Please use the argument -v to see more details.
